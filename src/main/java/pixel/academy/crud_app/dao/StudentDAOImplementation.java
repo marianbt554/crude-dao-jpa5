@@ -48,6 +48,7 @@ public class StudentDAOImplementation implements StudentDAO {
         entityManager.merge(theStudent);
     }
 
+    @Transactional
     @Override
     public void delete(Integer id) {
         Student theStudent = entityManager.find(Student.class, id);

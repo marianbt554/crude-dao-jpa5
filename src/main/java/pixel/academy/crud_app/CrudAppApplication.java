@@ -25,7 +25,8 @@ public class CrudAppApplication {
 			//createMultipleStudents(studentDAO);
 			//readStudent(studentDAO);
 			//queryForStudents(studentDAO);
-			updateStudent(studentDAO);
+			//updateStudent(studentDAO);
+			deleteStudent(studentDAO);
 		};
 	}
 
@@ -101,4 +102,12 @@ public class CrudAppApplication {
 		//afiseaza detaliile studentului actualizat
 		System.out.println("Updated student: " +  newStudent);
 	}
+
+	private void deleteStudent(StudentDAO studentDAO) {
+		int studentId = 4;
+		System.out.println("Deleting student with ID: " + studentId);
+		studentDAO.delete(studentId);
+	}
+
+
 }
